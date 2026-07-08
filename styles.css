@@ -1,24 +1,28 @@
+/* --- MODO ESCURO PADRÃO --- */
 body {
-    color: white;
-    background: black;
+    color: #e2f0d9; /* Verde bem claro */
+    background: #0b131a; /* Azul escuro profundo */
     margin: 0px;
     font-family: "Bebas Neue", sans-serif;
     margin-bottom: 100px;
+    transition: background 0.3s, color 0.3s;
 }
 
 header {
-    border-bottom: solid 2px rgb(42, 122, 228);
+    background-color: #0f1b26; /* Azul escuro */
+    border-bottom: solid 4px #2e7d32; /* Linha verde */
     padding: 20px;
     font-size: 32px;
-    color: rgb(49, 49, 49);
+    color: #ffffff;
 }
 
 .chamada {
-    background: rgb(82, 83, 83);
+    background: #132214; /* Verde escuro */
     padding-bottom: 80px;
     padding-top: 80px;
     display: flex;
     justify-content: center;
+    border-bottom: solid 2px #1976d2; /* Linha azul */
 }
 
 .chamada-texto {
@@ -28,20 +32,22 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* espaço entre logo e texto */
+    gap: 15px;
+    width: 100%;
 }
 
 .logo {
-    height: 90px; /* ajuste o tamanho conforme necessário */
+    height: 90px;
     width: auto;
 }
 
 h1 {
     font-size: 40px;
+    color: #4caf50; /* Verde destaque */
 }
 
 p {
-    font-size: 25;
+    font-size: 25px; /* Corrigido de '25' para '25px' */
 }
 
 .categoria-videos {
@@ -57,16 +63,81 @@ p {
 }
 
 .categoria-videos img {
-    opacity: 0.5;
+    opacity: 0.6;
     height: 200px;
+    border: 3px solid #1976d2; /* Borda azul */
+    transition: all 0.2s ease;
 }
 
 .categoria-videos img:hover {
     opacity: 1.0;
-    border: 3px solid green;
+    border: 3px solid #4caf50; /* Borda verde no hover */
 }
 
 .categoria h2 {
-    color: rgb(42, 122, 228);
+    color: #2196f3; /* Azul destaque */
 }
 
+/* --- ESTILO DO BOTÃO --- */
+.btn-modo {
+    margin-left: auto;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2e7d32; /* Verde */
+    color: white;
+    border: 2px solid #2196f3; /* Azul */
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.btn-modo:hover {
+    background-color: #2196f3;
+    border-color: #2e7d32;
+}
+
+/* --- MODO CLARO ALTERNATIVO --- */
+body.light-mode {
+    background: #f4f7f5; /* Branco esverdeado */
+    color: #1b2e1c; /* Verde escuro */
+}
+
+body.light-mode header {
+    background-color: #ffffff;
+    border-bottom: solid 4px #1976d2; /* Linha azul */
+    color: #1976d2;
+}
+
+body.light-mode .chamada {
+    background: #e3f2fd; /* Azul claro */
+    border-bottom: solid 2px #2e7d32;
+}
+
+body.light-mode h1 {
+    color: #1b5e20; /* Verde escuro */
+}
+
+body.light-mode .categoria h2 {
+    color: #1565c0; /* Azul escuro */
+}
+
+body.light-mode .categoria-videos img {
+    border: 3px solid #4caf50; /* Borda verde */
+}
+
+body.light-mode .categoria-videos img:hover {
+    border: 3px solid #1976d2; /* Borda azul no hover */
+}
+
+body.light-mode .btn-modo {
+    background-color: #1976d2; /* Azul */
+    color: white;
+    border: 2px solid #2e7d32;
+}
+
+body.light-mode .btn-modo:hover {
+    background-color: #2e7d32;
+    border-color: #1976d2;
+}
