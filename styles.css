@@ -1,128 +1,39 @@
-/* --- CONFIGURAÇÕES DO MODO ESCURO (PADRÃO) --- */
-body {
-    color: #e0e6ed;
-    background: #12161a; /* Azul escuro acinzentado moderno */
-    margin: 0px;
-    font-family: "Google Sans", sans-serif; /* Trocado para combinar com o botão */
-    margin-bottom: 100px;
-    transition: background 0.3s, color 0.3s;
-}
-
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    background-color: #1a2026;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-    width: 100%; /* Ocupa toda a largura do header */
-}
-
-.nome-site {
-    color: #ffffff;
-    margin: 0;
-}
-
-.logo {
-    height: 60px; 
-    width: auto;
-}
-
-.chamada {
-    background: #1e262f; /* Fundo intermediário para destacar a seção */
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.chamada-texto {
-    margin-right: 5%;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-p {
-    font-size: 20px;
-}
-
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
-}
-
-.categoria h2 {
-    color: rgb(42, 122, 228);
-}
-
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-}
-
-.categoria-videos img {
-    opacity: 0.7;
-    height: 200px;
-    transition: opacity 0.2s;
-}
-
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid #2ae453;
-}
-
-/* --- ESTILO DO BOTÃO DE ALTERNÂNCIA --- */
+/* --- ESTILOS DO BOTÃO DE ALTERNÂNCIA --- */
 .btn-modo {
-    margin-left: auto; /* Empurra o botão para a extrema direita */
+    margin-left: auto; /* Empurra o botão para a direita do cabeçalho */
     padding: 10px 20px;
     font-family: "Google Sans", sans-serif;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    background-color: rgb(42, 122, 228);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    transition: transform 0.2s, background-color 0.2s;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(42, 122, 228);
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .btn-modo:hover {
-    transform: scale(1.05);
-    background-color: #1a63c4;
+    background-color: rgb(42, 122, 228);
+    color: white;
 }
 
-/* --- ALTERAÇÕES PARA O MODO CLARO --- */
+/* --- REGRAS PARA O MODO CLARO --- */
 body.light-mode {
-    background: #f8f9fa; /* Branco suave/cinza bem claro */
-    color: #212529; /* Texto grafite escuro */
+    background: white;
+    color: black;
 }
 
 body.light-mode header {
-    background-color: #ffffff;
-    border-bottom: solid 2px #1a63c4;
-}
-
-body.light-mode .nome-site {
-    color: #212529;
+    color: black;
+    background-color: #f5f5f5;
 }
 
 body.light-mode .chamada {
-    background: #e9ecef; /* Cinza claro para destacar a seção */
+    background: #e0e0e0;
 }
 
 body.light-mode .btn-modo {
-    background-color: #212529;
-    color: #ffffff;
-}
-
-body.light-mode .btn-modo:hover {
-    background-color: #343a40;
+    background-color: black;
+    color: white;
 }
