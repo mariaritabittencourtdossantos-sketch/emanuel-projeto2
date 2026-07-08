@@ -1,72 +1,39 @@
-body {
+/* --- ESTILOS DO BOTÃO DE ALTERNÂNCIA --- */
+.btn-modo {
+    margin-left: auto; /* Empurra o botão para a direita do cabeçalho */
+    padding: 10px 20px;
+    font-family: "Google Sans", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(42, 122, 228);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-modo:hover {
+    background-color: rgb(42, 122, 228);
     color: white;
-    background: black;
-    margin: 0px;
-    font-family: "Bebas Neue", sans-serif;
-    margin-bottom: 100px;
 }
 
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(49, 49, 49);
+/* --- REGRAS PARA O MODO CLARO --- */
+body.light-mode {
+    background: white;
+    color: black;
 }
 
-.chamada {
-    background: rgb(82, 83, 83);
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
+body.light-mode header {
+    color: black;
+    background-color: #f5f5f5;
 }
 
-.chamada-texto {
-    margin-right: 5%;
+body.light-mode .chamada {
+    background: #e0e0e0;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* espaço entre logo e texto */
+body.light-mode .btn-modo {
+    background-color: black;
+    color: white;
 }
-
-.logo {
-    height: 90px; /* ajuste o tamanho conforme necessário */
-    width: auto;
-}
-
-h1 {
-    font-size: 40px;
-}
-
-p {
-    font-size: 25;
-}
-
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-}
-
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
-}
-
-.categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
-}
-
-.categoria h2 {
-    color: rgb(42, 122, 228);
-}
-
